@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @feverdecorator.name %>
+</p>
+
+<p>
+  <strong>Temperature:</strong>
+  <%= @feverdecorator.temperature %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @feverdecorator.description %>
+</p>
+
+<p>
+  <strong>CostOfTreatment:</strong>
+  <%= @feverdecorator.fees %>
+</p>
+
+<%= link_to 'Edit', edit_feverdecorator_path(@feverdecorator) %> |
+<%= link_to 'Back', feverdecorators_path %>

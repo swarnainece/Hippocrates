@@ -1,0 +1,1 @@
+json.array! @feverdecorators, partial: 'feverdecorators/feverdecorator', as: :feverdecorator

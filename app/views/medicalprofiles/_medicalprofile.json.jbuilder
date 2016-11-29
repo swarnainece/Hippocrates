@@ -1,0 +1,2 @@
+json.extract! medicalprofile, :id, :ImmunizationStatus, :Surgeries, :UnderlyingMedicalIllness, :Allergies, :SexuallyTransmittedDiseases, :user_id, :created_at, :updated_at
+json.url medicalprofile_url(medicalprofile, format: :json)

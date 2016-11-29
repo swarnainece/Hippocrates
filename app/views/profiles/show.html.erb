@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @profile.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @profile.lastname %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @profile.Gender %>
+</p>
+
+<p>
+  <strong>Dateofbirth:</strong>
+  <%= @profile.DateOfBirth %>
+</p>
+
+<p>
+  <strong>Bloodgroup:</strong>
+  <%= @profile.BloodGroup %>
+</p>
+
+<p>
+  <strong>Rhfactor:</strong>
+  <%= @profile.RhFactor %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @profile.Height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @profile.Weight %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @profile.user %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path( @profile) %>||
+
+<%= link_to 'MedicalProfile', medicalprofiles_path %> ||
+
+ <%= link_to 'Fever Diagonistic Quick Guide' , feverdecorators_path %>
+
+
+
+
+    
+

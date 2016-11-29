@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Medicalprofiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Immunizationstatus</th>
+      <th>Surgeries</th>
+      <th>Underlyingmedicalillness</th>
+      <th>Allergies</th>
+      <th>Sexuallytransmitteddiseases</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @medicalprofiles.each do |medicalprofile| %>
+      <tr>
+        <td><%= medicalprofile.ImmunizationStatus %></td>
+        <td><%= medicalprofile.Surgeries %></td>
+        <td><%= medicalprofile.UnderlyingMedicalIllness %></td>
+        <td><%= medicalprofile.Allergies %></td>
+        <td><%= medicalprofile.SexuallyTransmittedDiseases %></td>
+        <td><%= medicalprofile.user %></td>
+        <td><%= link_to 'Show', medicalprofile %></td>
+        <td><%= link_to 'Edit', edit_medicalprofile_path(medicalprofile) %></td>
+        <td><%= link_to 'Destroy', medicalprofile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Medicalprofile', new_medicalprofile_path %>||
+
+
+
+
+                             
+
+
+
+
+
+

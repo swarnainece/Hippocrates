@@ -1,0 +1,1 @@
+json.array! @medicalprofiles, partial: 'medicalprofiles/medicalprofile', as: :medicalprofile

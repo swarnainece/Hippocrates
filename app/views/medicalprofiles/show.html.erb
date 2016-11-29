@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Immunizationstatus:</strong>
+  <%= @medicalprofile.ImmunizationStatus %>
+</p>
+
+<p>
+  <strong>Surgeries:</strong>
+  <%= @medicalprofile.Surgeries %>
+</p>
+
+<p>
+  <strong>Underlyingmedicalillness:</strong>
+  <%= @medicalprofile.UnderlyingMedicalIllness %>
+</p>
+
+<p>
+  <strong>Allergies:</strong>
+  <%= @medicalprofile.Allergies %>
+</p>
+
+<p>
+  <strong>Sexuallytransmitteddiseases:</strong>
+  <%= @medicalprofile.SexuallyTransmittedDiseases %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @medicalprofile.user %>
+</p>
+
+<%= link_to 'Edit', edit_medicalprofile_path(@medicalprofile) %> |
+<%= link_to 'Back', medicalprofiles_path %>

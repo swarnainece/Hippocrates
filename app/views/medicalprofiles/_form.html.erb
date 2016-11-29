@@ -1,0 +1,47 @@
+<%= form_for(medicalprofile) do |f| %>
+  <% if medicalprofile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(medicalprofile.errors.count, "error") %> prohibited this medicalprofile from being saved:</h2>
+
+      <ul>
+      <% medicalprofile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ImmunizationStatus %>
+    <%= f.text_field :ImmunizationStatus %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Surgeries %>
+    <%= f.text_field :Surgeries %>
+  </div>
+
+  <div class="field">
+    <%= f.label :UnderlyingMedicalIllness %>
+    <%= f.text_field :UnderlyingMedicalIllness %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Allergies %>
+    <%= f.text_field :Allergies %>
+  </div>
+
+  <div class="field">
+    <%= f.label :SexuallyTransmittedDiseases %>
+    <%= f.text_field :SexuallyTransmittedDiseases %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

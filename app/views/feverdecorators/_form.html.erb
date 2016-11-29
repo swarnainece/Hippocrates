@@ -1,0 +1,108 @@
+<%= form_for(feverdecorator) do |f| %>
+  <% if feverdecorator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(feverdecorator.errors.count, "error") %> prohibited this feverdecorator from being saved:</h2>
+
+      <ul>
+      <% feverdecorator.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :temperature %>
+    <%= f.text_field :temperature %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :CostOfTreatment %>
+    <%= f.text_field :fees %>
+  </div>
+  
+  <div class="field">
+   Temperature does not fluctuate more than 1 degree Celsius in 24 hours:
+   <%= check_box_tag 'feverdecorator[continiousfever]', 'continiousfever' %>
+  </div>
+  
+  <div class="field">
+  Fever Fluctuates more than 2 degree Celsius in 24 hours:
+  <%= check_box_tag 'feverdecorator[remittentfever]', 'remittentfever' %>
+  </div>
+  
+  <div class="field">
+  Fever is present for some hours in a day and remains to normal for the remaining hours:
+  <%= check_box_tag 'feverdecorator[intermittentfever]', 'intermittentfever' %>
+  </div>
+  
+  <div class="field">
+  Temperature(Fever) variation is very formidable and exceeds 5 degree Celsius with Cuts in body :
+  <%= check_box_tag 'feverdecorator[septicfever]', 'septicfever' %>
+  </div>
+  
+  <div class="field">
+  Temperature variation is very large and exceeds 5 degree Celsius:
+  <%= check_box_tag 'feverdecorator[pelebsteinfever]', 'pelebsteinfever' %>
+  </div>
+  
+  <div class="field">
+  temperature present in evening only but doesnot exceed 100F with cough:
+  <%= check_box_tag 'feverdecorator[lowgradefever]', 'lowgradefever' %>
+  </div>
+  
+  <div class="field">
+  Temperature(Fever) continiously inscreasing over a period of time with no indication of Remmission:
+  <%= check_box_tag 'feverdecorator[ladderfever]', 'ladderfever' %>
+  </div>
+  
+  <div class="field">
+  Relapsing of fever after a certain interval:
+  <%= check_box_tag 'feverdecorator[relapsingfever]', 'relapsingfever' %>
+  </div>
+  
+  <div class="field">
+  Fever occurs once in 3 days:
+  <%= check_box_tag 'feverdecorator[tertianfever]', 'tertianfever' %>
+  </div>
+  
+  <div class="field">
+  Fever proliferates in morning rather than evening:
+  <%= check_box_tag 'feverdecorator[inversefever]', 'inversefever' %>
+  </div>
+  
+  <div class="field">
+  Fever With sweat at night:
+  <%= check_box_tag 'feverdecorator[nightsweatfever]', 'nightsweatfever' %>
+  </div>
+  
+  <div class="field">
+  Fever With Rash on Skin:
+  <%= check_box_tag 'feverdecorator[rashfever]', 'rashfever' %>
+  </div>
+  
+  <div class="field">
+  Fever With Pain in throat:
+  <%= check_box_tag 'feverdecorator[throatpainfever]', 'throatpainfever' %>
+  </div>
+  
+  
+  <div class="field">
+  Fever With Temperature more than 105 degrees:
+  <%= check_box_tag 'feverdecorator[HyperPyrexiaFever]', 'HyperPyrexiaFever' %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

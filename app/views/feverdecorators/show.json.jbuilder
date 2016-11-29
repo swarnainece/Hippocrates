@@ -1,0 +1,1 @@
+json.partial! "feverdecorators/feverdecorator", feverdecorator: @feverdecorator

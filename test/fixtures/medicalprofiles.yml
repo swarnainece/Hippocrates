@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ImmunizationStatus: MyString
+  Surgeries: MyString
+  UnderlyingMedicalIllness: MyString
+  Allergies: MyString
+  SexuallyTransmittedDiseases: MyString
+  user: one
+
+two:
+  ImmunizationStatus: MyString
+  Surgeries: MyString
+  UnderlyingMedicalIllness: MyString
+  Allergies: MyString
+  SexuallyTransmittedDiseases: MyString
+  user: two

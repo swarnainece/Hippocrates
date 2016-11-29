@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Feverdecorators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Temperature</th>
+      <th>Description</th>
+      <th>CostOfTreatment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @feverdecorators.each do |feverdecorator| %>
+      <tr>
+        <td><%= feverdecorator.name %></td>
+        <td><%= feverdecorator.temperature %></td>
+        <td><%= feverdecorator.description %></td>
+        <td><%= feverdecorator.fees %></td>
+        <td><%= link_to 'Show', feverdecorator %></td>
+        <td><%= link_to 'Edit', edit_feverdecorator_path(feverdecorator) %></td>
+        <td><%= link_to 'Destroy', feverdecorator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Feverdecorator', new_feverdecorator_path %>
