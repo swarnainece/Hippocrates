@@ -25,8 +25,10 @@
         <td><%= medicalprofile.SexuallyTransmittedDiseases %></td>
         <td><%= medicalprofile.user %></td>
         <td><%= link_to 'Show', medicalprofile %></td>
+        <% if current_user.admin? %>
         <td><%= link_to 'Edit', edit_medicalprofile_path(medicalprofile) %></td>
         <td><%= link_to 'Destroy', medicalprofile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

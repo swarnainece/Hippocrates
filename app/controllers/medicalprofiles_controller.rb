@@ -1,10 +1,17 @@
 class MedicalprofilesController < ApplicationController
   
      before_filter :authenticate_user!
+     before_filter :ensure_admin, :only => [:edit, :destroy]
      before_action :set_medicalprofile, only: [:show, :edit, :update, :destroy]
 
   # GET /medicalprofiles
   # GET /medicalprofiles.json
+  def ensure_admin
+    unless current_user && current_user.admin?
+    render :text => "Access Error Message", :status => :unauthorized
+    end
+  end
+
   def index
     @medicalprofiles = Medicalprofile.all
   end
