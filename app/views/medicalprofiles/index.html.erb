@@ -2,6 +2,31 @@
 
 <h1>Medicalprofiles</h1>
 
+
+<head>
+<style>
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 5px;
+}
+
+
+th {
+    text-align: left;
+}
+
+</style>
+</head>
+
+
 <table>
   <thead>
     <tr>
@@ -25,8 +50,10 @@
         <td><%= medicalprofile.SexuallyTransmittedDiseases %></td>
         <td><%= medicalprofile.user %></td>
         <td><%= link_to 'Show', medicalprofile %></td>
+        <% if current_user.admin? %>
         <td><%= link_to 'Edit', edit_medicalprofile_path(medicalprofile) %></td>
         <td><%= link_to 'Destroy', medicalprofile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
