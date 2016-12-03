@@ -13,5 +13,13 @@ Rails.application.routes.draw do
   
   get '/signedinuserprofile' => 'profiles#signedinuserprofile'
   
+  get '/infants' => 'infants#infantdoseofparacetamol'
   
+  
+  
+  
+  get '/dose', :controller=>'infants', :action=>'dose'
+  
+  post '/dose', :controller=>'infants', :action=>'dose'
+
 end

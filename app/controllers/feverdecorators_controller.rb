@@ -1,6 +1,6 @@
 
 
-require '/home/ubuntu/workspace/Hippocrates/lib/tasks/fever_decorator'
+require 'fever_decorator'
 
 
 

@@ -1,0 +1,24 @@
+
+<h1>Calculate the dose of Paracetamol for your baby</h1>
+<%= form_tag "/dose" do %>
+
+</br>
+
+<p>Enter the Name of your baby
+<%= text_field_tag :name %> </p> </br>
+
+<p>Enter the Age of your baby
+<%= text_field_tag :age %> </p> </br>
+
+
+<p>Enter the Weight of your baby
+<%= text_field_tag :weight_number %> </p> </br>
+
+<p>Enter the strength of Paracetamol (120 for 120mg/5mls || 250 for 250mg/5mls)
+<%= text_field_tag :strength_number %> </p> </br>
+</br>
+
+<%= submit_tag "Paracetamol Dose"%>
+
+
+<% end %>
