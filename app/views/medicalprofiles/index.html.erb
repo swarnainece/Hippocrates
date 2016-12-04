@@ -2,7 +2,6 @@
 
 <h1>Medicalprofiles</h1>
 
-
 <head>
 <style>
 
@@ -25,6 +24,8 @@ th {
 
 </style>
 </head>
+
+<% if current_user.admin? %>
 
 
 <table>
@@ -61,7 +62,9 @@ th {
 
 <br>
 
-<%= link_to 'New Medicalprofile', new_medicalprofile_path %>||
+<%end%>
+
+<%= link_to 'New Medicalprofile', new_medicalprofile_path %> ||  <%= link_to 'Profile' , profiles_path%>
 
 
 

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
   
+  root "home#index"
+  
   resources :feverdecorators
   root to: "home#index"
   

@@ -2,6 +2,12 @@
 
 <h1>Feverdecorators</h1>
 
+
+<% if current_user.admin? %>
+
+
+
+
 <table>
   <thead>
     <tr>
@@ -29,5 +35,7 @@
 </table>
 
 <br>
+
+<% end %>
 
 <%= link_to 'New Feverdecorator', new_feverdecorator_path %>
