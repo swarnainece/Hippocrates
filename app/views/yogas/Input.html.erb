@@ -1,0 +1,54 @@
+
+
+   <h1>Please Check the name of Yoga</h1>
+ 
+ 
+    <%= form_tag "/validate" do %>
+ 
+ 
+     <div class="field">
+     CHANDRABHEDAN :
+     <%= check_box_tag 'yoga[CHANDRABHEDAN]', 'CHANDRABHEDAN' %>
+     </div>
+ 
+     <div class="field">
+     SURYABHEDAN :
+     <%= check_box_tag 'yoga[SURYABHEDAN]', 'SURYABHEDAN' %>
+     </div>
+
+     <div class="field">
+     ANULOMVILOM :
+     <%= check_box_tag 'yoga[ANULOMVILOM]', 'ANULOMVILOM' %>
+     </div>
+     
+    <div class="field">
+     BHASTRIKA :
+     <%= check_box_tag 'yoga[BHASTRIKA]', 'BHASTRIKA' %>
+     </div> 
+     
+    <div class="field">
+     UJJAYI :
+    <%= check_box_tag 'yoga[UJJAYI]', 'UJJAYI' %>
+    </div>  
+     
+     <div class="field">
+     SHEETALI :
+     <%= check_box_tag 'yoga[SHEETALI]', 'SHEETALI' %>
+     </div>     
+     
+     <div class="field">
+     SHEETKARI :
+     <%= check_box_tag 'yoga[SHEETKARI]', 'SHEETKARI' %>
+     </div> 
+     
+     <div class="field">
+     BHRAMARI :
+     <%= check_box_tag 'yoga[BHRAMARI]', 'BHRAMARI' %>
+     </div> 
+     
+     
+ 
+    <%= submit_tag "Select Yoga" %>
+ 
+ 
+  <% end %>
