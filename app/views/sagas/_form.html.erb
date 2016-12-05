@@ -1,0 +1,43 @@
+<%= form_for([@profile , @saga]) do |f| %>
+  <% if @saga.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@saga.errors.count, "error") %> prohibited this saga from being saved:</h2>
+
+      <ul>
+      <% @saga.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ImmunizationStatus %>
+    <%= f.text_field :ImmunizationStatus %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Surgeries %>
+    <%= f.text_field :Surgeries %>
+  </div>
+
+  <div class="field">
+    <%= f.label :UnderlyingMedicalIllness %>
+    <%= f.text_field :UnderlyingMedicalIllness %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Allergies %>
+    <%= f.text_field :Allergies %>
+  </div>
+
+  <div class="field">
+    <%= f.label :SexuallyTransmittedDiseases %>
+    <%= f.text_field :SexuallyTransmittedDiseases %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

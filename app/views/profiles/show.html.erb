@@ -48,11 +48,13 @@
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path( @profile) %>||
 
-<%= link_to 'MedicalProfile', medicalprofiles_path %> ||
+ <%= link_to 'Clinical Sagas' , profile_sagas_path(@profile) %> ||
 
  <%= link_to 'Fever Diagonistic Quick Guide' , feverdecorators_path %>||
  
- <%= link_to 'Infants Section' , infants_path %>
+ <%= link_to 'Infants Section' , infants_path %> 
+ 
+ 
 
 
 

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Immunizationstatus:</strong>
+  <%= @saga.ImmunizationStatus %>
+</p>
+
+<p>
+  <strong>Surgeries:</strong>
+  <%= @saga.Surgeries %>
+</p>
+
+<p>
+  <strong>Underlyingmedicalillness:</strong>
+  <%= @saga.UnderlyingMedicalIllness %>
+</p>
+
+<p>
+  <strong>Allergies:</strong>
+  <%= @saga.Allergies %>
+</p>
+
+<p>
+  <strong>Sexuallytransmitteddiseases:</strong>
+  <%= @saga.SexuallyTransmittedDiseases %>
+</p>
+
+
+<%= link_to 'Edit', edit_profile_saga_path(@profile, @saga) %> |
+<%= link_to 'Back', profile_sagas_path(@profile) %>

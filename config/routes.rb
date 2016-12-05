@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   
+  resources :sagas
   root "home#index"
   
   resources :feverdecorators
@@ -23,5 +24,15 @@ Rails.application.routes.draw do
   get '/dose', :controller=>'infants', :action=>'dose'
   
   post '/dose', :controller=>'infants', :action=>'dose'
+  
+  
+  
+  
+  resources :profiles do
+     
+         resources :sagas
+  end
+  
+  
 
 end
