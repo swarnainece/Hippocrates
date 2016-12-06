@@ -200,7 +200,7 @@ class ANULOMVILOM < Yoga
         1.5 # In Minutes
   end
 end
-#*******************************************BHASTRIKA************************************8
+#*******************************************BHASTRIKA************************************
 
 class BHASTRIKA < Yoga
 
@@ -437,6 +437,51 @@ class MorningYoga < CompositeYoga
       end
 end
 
-#******************************************************************************
+#*******************************Noon***********************************************
+
+
+class AfterNoonYoga < CompositeYoga
+  
+      def initialize
+          super ('Do Afternoon Yoga')
+          self << BHASTRIKA.new
+          self << UJJAYI.new
+          self << SHEETALI.new
+      end
+end
+
+#***********************************Evening**********************************
+
+class EveningYoga < CompositeYoga
+  
+      def initialize
+          super ('Do Evening Yoga')
+          self << SHEETKARI.new
+          self << BHRAMARI.new
+         
+      end
+end
+
+
+#******************************Total*****************************************
+
+class TotalYogaTime < CompositeYoga
+  
+      def initialize
+          super ('Total Yoga Time')
+
+          self << MorningYoga.new
+          self << AfterNoonYoga.new
+          self << EveningYoga.new
+      end
+end
+
+
+
+
+
+
+
+
 
 
