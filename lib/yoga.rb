@@ -424,7 +424,7 @@ class BHRAMARI < Yoga
 end
 
 
-#*************************************************************************
+#*******************************Morning******************************************
 
 
 class MorningYoga < CompositeYoga
@@ -439,28 +439,4 @@ end
 
 #******************************************************************************
 
-class AfterNoonYoga < CompositeYoga
-  
-      def initialize
-          super ('Do Afternoon Yoga')
-          
-          
-          self << MorningYoga.new
-          self << BHASTRIKA.new
-          self << UJJAYI.new
-          self << SHEETALI.new
-      end
-end
 
-
-
-
-class TotalNoonYoga < CompositeYoga
-  
-      def initialize
-          super ('Do Afternoon Yoga')
-
-          self << MorningYoga.new
-          self << AfterNoonYoga.new
-      end
-end

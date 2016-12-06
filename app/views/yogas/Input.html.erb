@@ -45,10 +45,35 @@
      BHRAMARI :
      <%= check_box_tag 'yoga[BHRAMARI]', 'BHRAMARI' %>
      </div> 
-     
-     
- 
+
     <%= submit_tag "Select Yoga" %>
- 
- 
+
+  <% end %>
+  
+  <p></p>
+  
+   <h1>Please Click for Consolidated Time </h1>
+  
+  </br>
+  
+  
+   <%= form_tag "/composite" do %>
+         
+    <div class="field">
+     MorningYoga :
+     <%= check_box_tag 'yoga[MorningYoga]', 'MorningYoga' %>
+    </div>
+    
+    <div class="field">
+     AfterNoonYoga :
+     <%= check_box_tag 'yoga[AfterNoonYoga]', 'AfterNoonYoga' %>
+    </div>
+    
+    <div class="field">
+     TotalNoonYoga :
+     <%= check_box_tag 'yoga[TotalNoonYoga]', 'TotalNoonYoga' %>
+    </div>
+
+     <%= submit_tag " Composite Yoga" %>
+    
   <% end %>

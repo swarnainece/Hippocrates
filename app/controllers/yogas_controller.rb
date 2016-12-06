@@ -94,5 +94,68 @@ class YogasController < ApplicationController
           end
   
       end
+      
+      
+      
+      def  Composite
+       
+       
+          if params[:yoga][:MorningYoga].to_s.length > 0 then
+             composite = CompositeYoga.new('MorningYoga')
+             composite << MorningYoga.new
+             @TotalTime = composite[0].Time
+   
+          end
+          
+          
+          if params[:yoga][:AfterNoonYoga].to_s.length > 0 then
+             composite = CompositeYoga.new('Afternoon Yoga')
+             composite << NoonYoga.new
+             @TotalTime = composite[0].Time
+   
+          end
+          
+          
+          
+       
+       
+       
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
  end
  

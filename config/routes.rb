@@ -37,8 +37,12 @@ Rails.application.routes.draw do
    get '/yoga' => 'yogas#Input'
    
    get  '/validate' => 'yogas#Output'
- 
    post '/validate' => 'yogas#Output'
+   
+   
+   
+   get  '/composite' => 'yogas#Composite'
+   post '/composite' => 'yogas#Composite'
   
   
 
