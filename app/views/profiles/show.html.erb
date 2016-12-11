@@ -45,7 +45,7 @@
   <%= @profile.user %>
 </p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Edit', edit_profile_path(@profile) %> ||
 <%= link_to 'Back', profiles_path( @profile) %>||
 
  <%= link_to 'Clinical Sagas' , profile_sagas_path(@profile) %> ||
@@ -54,7 +54,9 @@
  
  <%= link_to 'Infants Section' , infants_path %> ||
  
- <%= link_to 'Yoga'  , yoga_path %>
+ <%= link_to 'Yoga'  , yoga_path %> ||
+ 
+ <%= link_to 'Immunization Status' , immunization_path %>
  
  
 

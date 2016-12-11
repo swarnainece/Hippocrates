@@ -1,0 +1,18 @@
+<h1>Enter the age of your baby to know the Immunization Status</h1>
+<%= form_tag "/immunization" do %>
+
+</br>
+
+<p>Enter the Name of your baby:
+<%= text_field_tag :name %> </p> </br>
+
+<p>Enter the Age of your baby:
+<%= text_field_tag :age %> </p> </br>
+
+
+<p>Enter the Weight of your baby:
+<%= text_field_tag :weight_number %> </p> </br>
+</br>
+
+<%= submit_tag "Immunization Status"%>
+<% end %>

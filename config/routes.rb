@@ -43,7 +43,10 @@ Rails.application.routes.draw do
    
    get  '/composite' => 'yogas#Composite'
    post '/composite' => 'yogas#Composite'
-  
-  
+   
+   get '/immunization' => 'immunizations#Input'
+   get '/immunization' => 'immunizations#Output'
+   post '/immunization' => 'immunizations#Output'
+   
 
 end
