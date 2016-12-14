@@ -12,5 +12,5 @@ class ImmunizationsController < ApplicationController
           
           @output = Immunization.ImmunizationVaccines(@age.to_i)
           
-      end
+       end
 end
